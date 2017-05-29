@@ -1,0 +1,423 @@
+{
+  "package": "Minecraft",
+  "tagline": "Minecraft  API",
+  "description": "",
+  "image": "https://logo.clearbit.com/minecraft.net",
+  "repo": "https://github.com/RapidSoftwareSolutions/Marketplace-Minecraft-Package",
+  "keywords": [
+    "API",
+    "games"
+  ],
+  "accounts": {
+    "domain": "minecraft.net",
+    "credentials": [
+    ]
+  },
+  "blocks": [
+    {
+    "name": "getPCServerStatus",
+    "description": "Status of a PC server",
+    "args": [{
+      "name": "address",
+      "type": "String",
+      "info": "Used to provide the IP address & port of the server. Example: play.minesuperior.com",
+      "required": true
+    }],
+    "callbacks": [{
+      "name": "error",
+      "info": "Error"
+    }, {
+      "name": "success",
+      "info": "Success"
+    }]
+  },
+    {
+      "name": "getSinglePCServerInfo",
+      "description": "Information about a PC server",
+      "args": [{
+        "name": "address",
+        "type": "String",
+        "info": "Used to provide the IP address & port of the server. Example: play.minesuperior.com",
+        "required": true
+      }],
+      "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
+    },
+    {
+      "name": "getPCServersInfo",
+      "description": "Information about multiple PC servers.",
+      "args": [{
+        "name": "address",
+        "type": "List",
+        "info": "Used to provide the IP address & port of the server. Example: ['play.minesuperior.com','mc.arkhamnetwork.org']",
+        "required": true,
+        "structure": {
+          "name": "address",
+          "type": "String",
+          "info": "single address"
+        }
+      }],
+      "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
+    },
+    {
+      "name": "getPCServerMOTD",
+      "description": "The MOTD of a PC server.",
+      "args": [{
+        "name": "address",
+        "type": "String",
+        "info": "Used to provide the IP address & port of the server. Example: play.minesuperior.com",
+        "required": true
+      }],
+      "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
+    },
+    {
+      "name": "getPCServerPlayersAmount",
+      "description": "The amount of players on a PC server.",
+      "args": [{
+        "name": "address",
+        "type": "String",
+        "info": "Used to provide the IP address & port of the server. Example: play.minesuperior.com",
+        "required": true
+      }],
+      "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
+    },
+    {
+      "name": "getPCServerFavicon",
+      "description": "The favicon of a PC server.",
+      "args": [{
+        "name": "address",
+        "type": "String",
+        "info": "Used to provide the IP address & port of the server. Example: play.minesuperior.com",
+        "required": true
+      }],
+      "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
+    },
+    {
+      "name": "getSingleMCPEServerInfo",
+      "description": "Information about a MCPE server.",
+      "args": [{
+        "name": "address",
+        "type": "String",
+        "info": "Used to provide the IP address & port of the server. Example: play.minesuperior.com",
+        "required": true
+      }],
+      "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
+    },
+    {
+      "name": "getMCPEServersInfo",
+      "description": "Information about a MCPE servers.",
+      "args": [{
+        "name": "address",
+        "type": "List",
+        "info": "Used to provide the IP address & port of the server. Example: play.minesuperior.com",
+        "required": true,
+        "structure": {
+          "name": "address",
+          "type": "String",
+          "info": "single address"
+        }
+      }],
+      "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
+    },
+    {
+      "name": "getSinglePCServerExtensiveInfo",
+      "description": "Extensive information about a PC server.",
+      "args": [{
+        "name": "address",
+        "type": "String",
+        "info": "Used to provide the IP address & port of the server. Example: play.minesuperior.com",
+        "required": true
+      }],
+      "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
+    },
+    {
+      "name": "getPCServersExtensiveInfo",
+      "description": "Extensive information about multiple PC servers",
+      "args": [{
+        "name": "address",
+        "type": "List",
+        "info": "Used to provide the IP address & port of the server. Example: play.minesuperior.com",
+        "required": true,
+        "structure": {
+          "name": "address",
+          "type": "String",
+          "info": "single address"
+        }
+      }],
+      "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
+    },
+    {
+      "name": "getBuycraftRecentPayments",
+      "description": "Recent payments made to the shop.",
+      "args": [{
+        "name": "key",
+        "type": "String",
+        "info": "Key per server that Buycraft generates for you.",
+        "required": true
+      }],
+      "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
+    },
+    {
+      "name": "getBuycraftPackages",
+      "description": "Packages in the shop.",
+      "args": [{
+        "name": "key",
+        "type": "String",
+        "info": "Key per server that Buycraft generates for you.",
+        "required": true
+      }],
+      "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
+    },
+    {
+      "name": "getBuycraftShopInfo",
+      "description": "Information about the shop.",
+      "args": [{
+        "name": "key",
+        "type": "String",
+        "info": "Key per server that Buycraft generates for you.",
+        "required": true
+      }],
+      "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
+    },
+    {
+      "name": "getMinecraftMarketPayments",
+      "description": "Recent payments made to the shop.",
+      "args": [{
+        "name": "key",
+        "type": "String",
+        "info": "Key per server that MinecraftMarket generates for you.",
+        "required": true
+      }],
+      "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
+    },
+    {
+      "name": "getMinecraftMarketPackages",
+      "description": "Packages that are viewable ingame",
+      "args": [{
+        "name": "key",
+        "type": "String",
+        "info": "Key per server that MinecraftMarket generates for you.",
+        "required": true
+      }],
+      "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
+    },
+    {
+      "name": "getBlockedServers",
+      "description": "List of servers blocked by Mojang",
+      "args": [],
+      "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
+    },
+    {
+      "name": "getPlayersAvatar",
+      "description": "Return player avatar",
+      "args": [{
+        "name": "username",
+        "type": "String",
+        "info": "Username of the player who you want an avatar of.",
+        "required": true
+      },
+        {
+          "name": "helm",
+          "type": "Boolean",
+          "info": "Boolean for changing if the helm layer is rendered.",
+          "required": false
+        },
+        {
+          "name": "size",
+          "type": "Number",
+          "info": "Number to change the size of the image.",
+          "required": false
+        }
+      ],
+      "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
+    },
+    {
+      "name": "getPlayersSkin",
+      "description": "2D image of player's skin",
+      "args": [{
+        "name": "username",
+        "type": "String",
+        "info": "Username of the player who you want an avatar of.",
+        "required": true
+      },
+        {
+          "name": "helm",
+          "type": "Boolean",
+          "info": "Boolean for changing if the helm layer is rendered.",
+          "required": false
+        },
+        {
+          "name": "size",
+          "type": "Number",
+          "info": "Number to change the size of the image.",
+          "required": false
+        }
+      ],
+      "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
+    },
+    {
+      "name": "getPlayerSkinFile",
+      "description": "Raw skin file of a user",
+      "args": [{
+        "name": "username",
+        "type": "String",
+        "info": "Username of the player who you want an avatar of.",
+        "required": true
+      }],
+      "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
+    },
+    {
+      "name": "getMinecraftServicesStatus",
+      "description": "Check the current status of Minecraft's services",
+      "args": [],
+      "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
+    },
+    {
+      "name": "checkIsUp",
+      "description": "Check the status of a IP/Domain",
+      "args": [{
+        "name": "endpoint",
+        "type": "String",
+        "info": "IP/Domain to check the status of.",
+        "required": true
+      }],
+      "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
+    },
+    {
+      "name": "checkDomainDNS",
+      "description": "Check the DNS of a domain",
+      "args": [{
+        "name": "domain",
+        "type": "String",
+        "info": "Domain to check the DNS of.",
+        "required": true
+      }],
+      "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
+    }
+  ]
+}
