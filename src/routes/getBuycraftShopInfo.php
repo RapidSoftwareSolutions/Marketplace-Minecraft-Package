@@ -4,7 +4,7 @@ $app->post('/api/Minecraft/getBuycraftShopInfo', function ($request, $response) 
 
     $settings = $this->settings;
     $checkRequest = $this->validation;
-    $validateRes = $checkRequest->validate($request, ['key']);
+    $validateRes = $checkRequest->validate($request, ['buycraftKey']);
 
     if(!empty($validateRes) && isset($validateRes['callback']) && $validateRes['callback']=='error') {
         return $response->withHeader('Content-type', 'application/json')->withStatus(200)->withJson($validateRes);
@@ -12,7 +12,7 @@ $app->post('/api/Minecraft/getBuycraftShopInfo', function ($request, $response) 
         $post_data = $validateRes;
     }
 
-    $key = $post_data['args']['key'];
+    $key = $post_data['args']['buycraftKey'];
 
     $query_str = $settings['api_url'] . "buycraft/$key/info";
     $client = $this->httpClient;

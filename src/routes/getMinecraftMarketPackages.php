@@ -4,7 +4,7 @@ $app->post('/api/Minecraft/getMinecraftMarketPackages', function ($request, $res
 
     $settings = $this->settings;
     $checkRequest = $this->validation;
-    $validateRes = $checkRequest->validate($request, ['key']);
+    $validateRes = $checkRequest->validate($request, ['marketKey']);
 
     if(!empty($validateRes) && isset($validateRes['callback']) && $validateRes['callback']=='error') {
         return $response->withHeader('Content-type', 'application/json')->withStatus(200)->withJson($validateRes);
@@ -12,7 +12,7 @@ $app->post('/api/Minecraft/getMinecraftMarketPackages', function ($request, $res
         $post_data = $validateRes;
     }
 
-    $key = $post_data['args']['key'];
+    $key = $post_data['args']['marketKey'];
 
     $query_str = $settings['api_url'] . "minecraftmarket/$key/ingame";
     $client = $this->httpClient;

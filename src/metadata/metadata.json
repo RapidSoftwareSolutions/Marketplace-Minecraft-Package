@@ -11,6 +11,7 @@
   "accounts": {
     "domain": "minecraft.net",
     "credentials": [
+      ""
     ]
   },
   "blocks": [
@@ -209,7 +210,7 @@
       "name": "getBuycraftRecentPayments",
       "description": "Recent payments made to the shop.",
       "args": [{
-        "name": "key",
+        "name": "buycraftKey",
         "type": "String",
         "info": "Key per server that Buycraft generates for you.",
         "required": true
@@ -226,7 +227,7 @@
       "name": "getBuycraftPackages",
       "description": "Packages in the shop.",
       "args": [{
-        "name": "key",
+        "name": "buycraftKey",
         "type": "String",
         "info": "Key per server that Buycraft generates for you.",
         "required": true
@@ -243,7 +244,7 @@
       "name": "getBuycraftShopInfo",
       "description": "Information about the shop.",
       "args": [{
-        "name": "key",
+        "name": "buycraftKey",
         "type": "String",
         "info": "Key per server that Buycraft generates for you.",
         "required": true
@@ -260,7 +261,7 @@
       "name": "getMinecraftMarketPayments",
       "description": "Recent payments made to the shop.",
       "args": [{
-        "name": "key",
+        "name": "marketKey",
         "type": "String",
         "info": "Key per server that MinecraftMarket generates for you.",
         "required": true
@@ -277,7 +278,7 @@
       "name": "getMinecraftMarketPackages",
       "description": "Packages that are viewable ingame",
       "args": [{
-        "name": "key",
+        "name": "marketKey",
         "type": "String",
         "info": "Key per server that MinecraftMarket generates for you.",
         "required": true
