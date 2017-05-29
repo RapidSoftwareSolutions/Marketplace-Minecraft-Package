@@ -144,7 +144,7 @@
       "args": [{
         "name": "address",
         "type": "List",
-        "info": "Used to provide the IP address & port of the server. Example: play.minesuperior.com",
+        "info": "Used to provide the IP address & port of the server. Example: ['pe.cookie-build.com','play.lbsg.net']",
         "required": true,
         "structure": {
           "name": "address",
@@ -187,8 +187,14 @@
         "required": true,
         "structure": {
           "name": "address",
-          "type": "String",
-          "info": "single address"
+          "type": "List",
+          "info": "Used to provide the IP address & port of the server. Example: ['pe.cookie-build.com','play.lbsg.net']",
+          "required": true,
+          "structure": {
+            "name": "address",
+            "type": "String",
+            "info": "single address"
+          }
         }
       }],
       "callbacks": [{
