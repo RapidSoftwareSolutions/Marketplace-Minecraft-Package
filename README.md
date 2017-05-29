@@ -28,7 +28,7 @@ Information about multiple PC servers.
 
 | Field  | Type| Description
 |--------|-----|----------
-| address| List| Used to provide the IP address & port of the server. Example: ```['play.minesuperior.com','mc.arkhamnetwork.org']```
+| address| Array| Used to provide the IP address & port of the server. Example: ```['play.minesuperior.com','mc.arkhamnetwork.org']```
 
 ## Minecraft.getPCServerMOTD
 The MOTD of a PC server.
@@ -63,7 +63,7 @@ Information about a MCPE servers.
 
 | Field  | Type| Description
 |--------|-----|----------
-| address| List| Used to provide the IP address & port of the server. Example: ```['pe.cookie-build.com','play.lbsg.net']```
+| address| Array| Used to provide the IP address & port of the server. Example: ```['pe.cookie-build.com','play.lbsg.net']```
 
 ## Minecraft.getSinglePCServerExtensiveInfo
 Extensive information about a PC server.
@@ -77,7 +77,7 @@ Extensive information about multiple PC servers
 
 | Field  | Type| Description
 |--------|-----|----------
-| address| List| Used to provide the IP address & port of the server. Example: ```play.minesuperior.com```
+| address| Array| Used to provide the IP address & port of the server. Example: ```play.minesuperior.com```
 
 ## Minecraft.getBuycraftRecentPayments
 Recent payments made to the shop.
@@ -115,7 +115,7 @@ Packages that are viewable ingame
 | marketKey| String| Key per server that MinecraftMarket generates for you.
 
 ## Minecraft.getBlockedServers
-List of servers blocked by Mojang
+Array of servers blocked by Mojang
 
 No arguments.
 
